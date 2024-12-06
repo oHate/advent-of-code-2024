@@ -4,13 +4,13 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
 
-public class DayOne {
+public class Day01 {
 
     public static void main(String[] args) throws FileNotFoundException {
         List<Integer> leftList = new ArrayList<>();
         List<Integer> rightList = new ArrayList<>();
 
-        File file = new File("src/main/resources/day1.txt");
+        File file = new File("src/main/resources/day01.txt");
         Scanner scanner = new Scanner(file);
 
         while (scanner.hasNextLine()) {
@@ -44,7 +44,9 @@ public class DayOne {
             similarityScore += num * occurrenceMap.getOrDefault(num, 0);
         }
 
-        System.out.println("Total Similarity Score: " + similarityScore);
+        System.out.println("Day 1: Historian Hysteria");
+        System.out.println("Part 1: " + totalDistance);
+        System.out.println("Part 2: " + similarityScore);
     }
 
 }
